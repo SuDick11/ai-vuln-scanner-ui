@@ -4,7 +4,8 @@ const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
 
 const scanApi = {
   scan: async (url, depth, cookie, maxPage) => {
-    const payload = { url, max_depth: depth, max_pages: maxPage };
+    const pages = Number(maxPage);
+    const payload = { url, max_depth: depth, max_pages: isNaN(pages) || pages < 1 ? 100 : pages };
     if (cookie && cookie.trim()) {
       payload.dvwa_cookie = {
         phpsessid: cookie.trim(),

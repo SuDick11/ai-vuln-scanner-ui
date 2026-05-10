@@ -63,9 +63,8 @@ const DashboardPanel = ({ scanResults, isLoading, error, onScan }) => {
               className="sunken-panel"
               type="number"
               value={maxPage}
-              onChange={(e) => setMaxPage(Number(e.target.value))}
-              min="1"
-              placeholder="100"
+              onChange={(e) => setMaxPage(e.target.value)}
+              placeholder="Max number of URLs to crawl (min 1)"
               disabled={isLoading}
             />
           </div>

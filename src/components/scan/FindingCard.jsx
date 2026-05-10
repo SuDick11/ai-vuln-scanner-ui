@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const FindingCard = ({ vuln, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -53,7 +55,13 @@ const FindingCard = ({ vuln, defaultOpen = false }) => {
           {vuln.remediation_code && (
             <div className="finding-card__field">
               <span className="finding-card__field-label">Remediation:</span>
-              <pre className="finding-card__evidence">{vuln.remediation_code}</pre>
+              <SyntaxHighlighter
+                language="python"
+                style={tomorrow}
+                customStyle={{ borderRadius: '4px', padding: '12px', fontSize: '13px' }}
+              >
+                {vuln.remediation_code}
+              </SyntaxHighlighter>
             </div>
           )}
         </div>
