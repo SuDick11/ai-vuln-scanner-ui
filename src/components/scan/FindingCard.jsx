@@ -58,7 +58,7 @@ const FindingCard = ({ vuln, defaultOpen = false }) => {
               <SyntaxHighlighter
                 language="python"
                 style={tomorrow}
-                customStyle={{ borderRadius: '4px', padding: '12px', fontSize: '13px' }}
+                customStyle={{ borderRadius: '4px', padding: '12px', fontSize: '13px', backgroundColor: '#ffffff' }}
               >
                 {vuln.remediation_code
                   .replace(/^```[\w]*\n?/, '')
