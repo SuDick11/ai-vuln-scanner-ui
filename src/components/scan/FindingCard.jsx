@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-import { tomorrow } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { atomOneLight } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
 const FindingCard = ({ vuln, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
@@ -57,7 +57,7 @@ const FindingCard = ({ vuln, defaultOpen = false }) => {
               <span className="finding-card__field-label">Remediation:</span>
               <SyntaxHighlighter
                 language="python"
-                style={tomorrow}
+                style={atomOneLight}
                 customStyle={{ borderRadius: '4px', padding: '12px', fontSize: '13px', backgroundColor: '#ffffff' }}
               >
                 {vuln.remediation_code
