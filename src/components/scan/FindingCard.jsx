@@ -60,7 +60,10 @@ const FindingCard = ({ vuln, defaultOpen = false }) => {
                 style={tomorrow}
                 customStyle={{ borderRadius: '4px', padding: '12px', fontSize: '13px' }}
               >
-                {vuln.remediation_code}
+                {vuln.remediation_code
+                  .replace(/^```[\w]*\n?/, '')
+                  .replace(/```$/, '')
+                  .trim()}
               </SyntaxHighlighter>
             </div>
           )}
