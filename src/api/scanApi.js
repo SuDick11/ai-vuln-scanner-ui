@@ -3,8 +3,8 @@ import axios from 'axios';
 const BACKEND_URL = import.meta.env.VITE_BACKEND_URL || '';
 
 const scanApi = {
-  scan: async (url, depth, cookie) => {
-    const payload = { url, max_depth: depth };
+  scan: async (url, depth, cookie, maxPage) => {
+    const payload = { url, max_depth: depth, max_pages: maxPage };
     if (cookie && cookie.trim()) {
       payload.dvwa_cookie = {
         phpsessid: cookie.trim(),

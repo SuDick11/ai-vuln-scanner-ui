@@ -9,8 +9,8 @@ import './App.css';
 const App = () => {
   const { scanResults, isLoading, error, startScan } = useScan();
 
-  const handleScan = useCallback(async (url, depth, cookie) => {
-    await startScan(url, depth, cookie);
+  const handleScan = useCallback(async (url, depth, cookie, maxPage) => {
+    await startScan(url, depth, cookie, maxPage);
   }, [startScan]);
 
   return (

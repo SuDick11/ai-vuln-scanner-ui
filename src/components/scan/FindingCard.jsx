@@ -1,20 +1,11 @@
 import React, { useState } from 'react';
-import { getSeverityColor } from '../../utils/riskUtils';
 
 const FindingCard = ({ vuln, defaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(defaultOpen);
 
-  const severityColor = getSeverityColor(vuln.severity);
-
   return (
     <div className="finding-card outset">
       <button className="finding-card__header" onClick={() => setIsOpen(!isOpen)}>
-        <span
-          className="sev-badge"
-          style={{ backgroundColor: severityColor, color: '#fff' }}
-        >
-          {vuln.severity || 'UNKNOWN'}
-        </span>
         <span className="finding-card__type">{vuln.vulnerability_type || 'Unknown'}</span>
         <span className="finding-card__url">{vuln.target_endpoint || ''}</span>
         <span className="finding-card__arrow">{isOpen ? '\u25B2' : '\u25BC'}</span>

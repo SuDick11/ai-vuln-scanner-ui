@@ -622,41 +622,6 @@ select.sunken-panel {
   transition: width 0.4s ease;
 }
 
-/* ---- Severity badges ---- */
-.sev-badge {
-  font-size: 9px;
-  font-weight: 900;
-  padding: 1px 6px;
-  letter-spacing: 0.5px;
-  flex-shrink: 0;
-  display: inline-block;
-}
-
-.sev-badge--small {
-  font-size: 9px;
-  padding: 1px 4px;
-}
-
-.sev-badge--critical {
-  background: var(--error);
-  color: #ffffff;
-}
-
-.sev-badge--medium {
-  background: var(--secondary);
-  color: #ffffff;
-}
-
-.sev-badge--low {
-  background: var(--success);
-  color: #ffffff;
-}
-
-.sev-badge--info {
-  background: var(--primary);
-  color: #ffffff;
-}
-
 /* ---- Retro tables ---- */
 .retro-table {
   width: 100%;

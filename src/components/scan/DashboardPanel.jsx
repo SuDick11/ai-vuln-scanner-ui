@@ -5,10 +5,11 @@ const DashboardPanel = ({ scanResults, isLoading, error, onScan }) => {
   const [url, setUrl] = useState('');
   const [depth, setDepth] = useState(1);
   const [cookie, setCookie] = useState('');
+  const [maxPage, setMaxPage] = useState(100);
 
   const handleSubmit = () => {
     if (!url.trim()) return;
-    onScan(url, depth, cookie);
+    onScan(url, depth, cookie, maxPage);
   };
 
   return (
@@ -55,6 +56,18 @@ const DashboardPanel = ({ scanResults, isLoading, error, onScan }) => {
                 </button>
               ))}
             </div>
+          </div>
+          <div className="form-group">
+            <label className="form-label">Max Pages</label>
+            <input
+              className="sunken-panel"
+              type="number"
+              value={maxPage}
+              onChange={(e) => setMaxPage(Number(e.target.value))}
+              min="1"
+              placeholder="100"
+              disabled={isLoading}
+            />
           </div>
           <button
             className="retro-btn retro-btn--primary"

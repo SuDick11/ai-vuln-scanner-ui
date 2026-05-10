@@ -6,11 +6,11 @@ const useScan = () => {
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
 
-  const startScan = useCallback(async (url, maxDepth, cookie) => {
+  const startScan = useCallback(async (url, maxDepth, cookie, maxPage) => {
     setIsLoading(true);
     setError(null);
     try {
-      const result = await scanApi.scan(url, maxDepth, cookie);
+      const result = await scanApi.scan(url, maxDepth, cookie, maxPage);
       setScanResults(result);
       return result;
     } catch (err) {
