@@ -136,8 +136,8 @@ Endpoint kiểm tra trạng thái hoạt động của backend.
 |---|---|---|
 | Target URL | URL đầy đủ của ứng dụng web cần quét | Bắt buộc |
 | Depth | Độ sâu crawl — số cấp liên kết cần theo dõi (1, 2 hoặc 3) | 1 |
-| Max Pages | Số URL tối đa cần crawl | 100 |
-| Cookie | Giá trị cookie PHPSESSID để quét xác thực | Không có |
+| Max Pages | Số URL tối đa cần crawl | 100 (default) |
+| Cookie | Giá trị cookie PHPSESSID để quét xác thực | Tìm qua DevTools |
 
 ## Lưu ý bảo mật
 
