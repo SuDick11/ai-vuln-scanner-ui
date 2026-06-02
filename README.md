@@ -1,12 +1,10 @@
-# fe_old_tool_scan
+# ai-vuln-scanner-ui
 
 Giao diện frontend cho hệ thống quét lỗ hổng bảo mật web có hỗ trợ AI. Ứng dụng cung cấp giao diện đồ họa theo phong cách retro để nhập mục tiêu quét, cấu hình tham số và xem kết quả lỗ hổng trả về từ backend.
 
 ## Tổng quan
 
 Repository này chứa thành phần frontend React của hệ thống VULN_SCAN v2.0. Frontend giao tiếp với một dịch vụ backend riêng biệt chịu trách nhiệm crawl web và phát hiện lỗ hổng. Giao diện trình bày kết quả quét theo cấu trúc rõ ràng, bao gồm loại lỗ hổng, endpoint mục tiêu, phương thức HTTP, tham số dễ bị tấn công, payload, bằng chứng, giải thích từ LLM và mã remediation.
-
-Hệ thống được thiết kế để sử dụng trên các ứng dụng web chấp nhận yêu cầu HTTP có hoặc không có xác thực. Hỗ trợ inject cookie phiên để quét các bề mặt tấn công yêu cầu xác thực, đặc biệt phù hợp với các môi trường kiểu DVWA trong quá trình đánh giá bảo mật.
 
 ## Tính năng
 
